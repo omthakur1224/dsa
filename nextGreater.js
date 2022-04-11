@@ -2,7 +2,6 @@
 // Given an array of N elements, find the next greater element
 // for each element in the array, print -1 if it does not exits
 // Refer to the sample I/O for better understanding
-
 // Test case Explanation:-
 // arr=[1,3,2,4]
 // In the sample test case, the array contains 4 elements,
