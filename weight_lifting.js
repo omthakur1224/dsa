@@ -1,7 +1,10 @@
 function check(n,arr){
-    let left=0;let right=n-1;
-    let sum1=0;let sum2=0;
-    let hsum=0;let jsum=0;
+    let left=0;
+    let right=n-1;
+    let sum1=0;
+    let sum2=0;
+    let hsum=0;
+    let jsum=0;
 
 while(left<=right)
 { 
