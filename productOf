@@ -1,0 +1,33 @@
+
+
+function twoArrayAndProduct(n, m, matrix, p){
+    //write code here
+    let count=0;
+    let mat=matrix;
+ for(let i=0;i<n;i++){
+     
+ for(let j=0;j<m;j++){
+     
+      if(i+2<n){
+          if(mat[i][j]*mat[i+1][j]*mat[i+2][j]==p)
+          count++;
+          
+      }
+      if(j+2<m){
+          if(mat[i][j]*mat[i][j+1]*mat[i][j+2]==p)
+          count++;
+      }
+      //2nd or top to bottom diagonal
+      if(i+2<n&&j+2<m){
+           if(mat[i][j]*mat[i+1][j+1]*mat[i+2][j+2]==p)
+          count++;
+      }
+       if(i-2>=0&&j+2<m){
+           if(mat[i][j]*mat[i-1][j+1]*mat[i-2][j+2]==p)
+          count++;
+      }
+  }
+     
+ }
+ console.log(count)
+}

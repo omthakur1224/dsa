@@ -8,7 +8,7 @@ function  Subarray(n,m,array){
        while(i<n){
            if(sum+array[i]<m){        
              sum+=array[i];
-              count+=i-j+1;
+              count+=i-j+1; //window size
               i++;
        }else{
            sum-=array[j];

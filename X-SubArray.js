@@ -1,7 +1,9 @@
 // X subarrays Ended
 // Description
 
-// Given a array A having N positive integers. Count all the subarrays of A having length X, such that each subarray has no integer greater than K.
+// Given a array A having N positive integers. 
+// Count all the subarrays of A having length X,
+// such that each subarray has no integer greater than K.
 
 
 // Input
@@ -41,7 +43,7 @@
 function  XsubArray(N,K,X, arr) {
     let count=0,subArr_count=0;
     for(let i=0;i<N;i++){
-       if(arr[i]>K)count=0 
+       if(arr[i]>K)count=0;
        else count++;
        if(count>=X)subArr_count++;
     }

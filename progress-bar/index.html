@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    #progress-bar {
+      width: 200px;
+      height: 20px;
+      background-color: #d0f0b9;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    #progress {
+      width: 0%;
+      height: 100%;
+      background-color: #f75050;
+      transition: width 0.3s ease-in-out;
+    }
+
+    .button-container {
+      margin-top: 20px;
+    }
+
+    .button-container button {
+      margin-right: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div id="progress-bar">
+    <div id="progress"></div>
+  </div>
+
+  <div class="button-container">
+    <button id="prev-button">Prev</button>
+    <span id="percentage">0%</span>
+    <button id="next-button">Next</button>
+  </div>
+  
+  <script>
+    var progress = 0;
+    
+    function updateProgressBar() {
+      const progressBar = document.getElementById('progress');
+      progressBar.style.width = `${progress}%`;
+      document.getElementById('percentage').innerHTML=progress+"%";
+    }
+
+    function incrementProgress() {
+      if (progress < 100) {
+        progress += 20;
+        updateProgressBar();
+      }
+    }
+
+    function decrementProgress() {
+      if (progress > 0) {
+        progress -= 20;
+        updateProgressBar();
+      }
+    }
+    document.getElementById('next-button').addEventListener('click', incrementProgress);
+    document.getElementById('prev-button').addEventListener('click', decrementProgress);
+  </script>
+</body>
+</html>
